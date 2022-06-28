@@ -11,6 +11,8 @@ alert("El factorial de: " + numero + " es: " + total)
 
 // SOLICITA INGRESAR UN TEXTO Y REPITE EL CICLO HASTA QUE SE INGRESE LA CONTRASEÑA CORRECTA
 
+let password
+
 do {
     password = prompt("Ingrese su contraseña")
 

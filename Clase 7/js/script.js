@@ -59,4 +59,67 @@ const personas = [persona1, persona2, persona3, persona4, persona5]
 //     console.log(persona)
 // })
 
-console.log(personas.find(persona => persona.nombre == "Pedro" && persona.apellido == "Carlez"))
+
+// let nombreABuscar = prompt("Ingrese un nombre")
+// let apellidoABuscar = prompt("Ingrese un apellido")
+
+// console.log(personas.find(persona => persona.nombre == nombreABuscar && persona.apellido == apellidoABuscar))
+
+
+// const personasFiltradas = personas.filter(persona => persona.sueldo > 12000)
+
+// personasFiltradas.forEach(persona => {
+//     console.log(persona)
+// })
+
+
+// let consulta = personas.some(persona => persona.sueldo > 20000)
+
+// if(consulta){
+//     console.log(personas.filter(persona => persona.sueldo > 20000))
+// } else {
+//     console.log("No existen personas cuyo sueldo sea mayor a 200000")
+// }
+
+
+// let acumulador = 0
+
+// const sueldos = personas.map(persona => persona.sueldo)
+// sueldos.forEach(sueldo => {
+//     acumulador += sueldo
+// })
+
+// console.log(acumulador)
+
+// const sueldosId = personas.map(persona => persona = {sueldo: persona.sueldo, id: persona.id})
+// console.log(sueldosId)
+
+
+
+// const sueldos = personas.map(persona => persona.sueldo)
+
+// // let acumulador = 0
+// // sueldos.forEach(sueldo => {
+// //     acumulador += sueldo
+// // })
+
+// console.log(sueldos)
+
+// const sueldosAcum = sueldos.slice(0, 3)
+
+// let acumulador = sueldosAcum.reduce((prev, act) => prev + act, 0)
+
+// console.log(acumulador / sueldos.length)
+
+// const caracteres = ["h", "o", "l", "a"]
+// console.log(caracteres.reduce((prev,act) => prev + act, ""))
+
+
+
+const sueldos = personas.map(persona => persona.sueldo)
+
+console.log(sueldos)
+console.log(sueldos.sort((a, b) => a - b))
+console.log(sueldos.sort((a, b) => b - a))
+
+

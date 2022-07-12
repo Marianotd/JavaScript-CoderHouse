@@ -95,7 +95,7 @@ class Producto {
 
     mostrarProducto(){
         console.log(`${this.nombre} - ${this.marca}`)
-    }
+    } 
 }
 
 const producto1 = new Producto("Yerba Mate", "La yerbita", 400, 20)

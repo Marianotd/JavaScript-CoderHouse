@@ -2,7 +2,17 @@ const sumar = (num1, num2) => num1 + num2
 const multiplicar = (num1, num2) => num1 * num2
 const dividir = (num1, num2) => num1 / num2
 
-let opcion1, opcion2, opcion3, IVA = 0, total = 0, totalen3 = 0, totalEn6 = 0, totalEn12 = 0
+function sumarCarrito(carrito) {
+    carritoImportes = carrito.map(producto => producto.precio)
+
+    carritoImportes.forEach(producto => {
+        acumuladorImportes += producto
+    })
+
+    acumuladorImportes = carritoImportes.reduce((prev, act) => prev + act, 0)
+}
+
+let opcion1, opcion2, opcion3, productoNombre, productoPrecio, carritoImportes, acumuladorImportes = 0, IVA = 0, total = 0, totalen3 = 0, totalEn6 = 0, totalEn12 = 0
 const carrito = []
 
 class Producto {
@@ -44,31 +54,38 @@ do {
             switch(opcion2){
                 case 1:
                     carrito.push(productos[0])
-                    alert(`¡Producto añadido al carrito! \nSu subtotal de compra es $${carrito}`)
+                    sumarCarrito(carrito)
+                    alert(`¡Producto añadido al carrito! \nSu subtotal de compra es $${acumuladorImportes}`)
                     break
                 case 2:
                     carrito.push(productos[1])
-                    alert(`Producto añadido al carrito \nSu subtotal de compra es $${carrito}`)
+                    sumarCarrito(carrito)
+                    alert(`Producto añadido al carrito \nSu subtotal de compra es $${acumuladorImportes}`)
                     break
                 case 3:
                     carrito.push(productos[2])
-                    alert(`Producto añadido al carrito \nSu subtotal de compra es $${carrito}`)
+                    sumarCarrito(carrito)
+                    alert(`Producto añadido al carrito \nSu subtotal de compra es $${acumuladorImportes}`)
                     break
                 case 4:
                     carrito.push(productos[3])
-                    alert(`Producto añadido al carrito \nSu subtotal de compra es $${carrito}`)
+                    sumarCarrito(carrito)
+                    alert(`Producto añadido al carrito \nSu subtotal de compra es $${acumuladorImportes}`)
                     break
                 case 5:
                     carrito.push(productos[4])
-                    alert(`Producto añadido al carrito \nSu subtotal de compra es $${carrito}`)
+                    sumarCarrito(carrito)
+                    alert(`Producto añadido al carrito \nSu subtotal de compra es $${acumuladorImportes}`)
                     break
                 case 6:
                     carrito.push(productos[5])
-                    alert(`Producto añadido al carrito \nSu subtotal de compra es $${carrito}`)
+                    sumarCarrito(carrito)
+                    alert(`Producto añadido al carrito \nSu subtotal de compra es $${acumuladorImportes}`)
                     break
                 case 7:
                     carrito.push(productos[6])
-                    alert(`Producto añadido al carrito \nSu subtotal de compra es $${carrito}`)
+                    sumarCarrito(carrito)
+                    alert(`Producto añadido al carrito \nSu subtotal de compra es $${acumuladorImportes}`)
                     break
                 default:
                     break
@@ -76,9 +93,9 @@ do {
             break
     
         case 2:
-            IVA = multiplicar(carrito, 0.21)
-            total = sumar(carrito, IVA)
-            alert(`Detalle de compra: \nSubtotal productos: $${carrito} \nIVA $${IVA} \nTotal $${total}`)
+            IVA = multiplicar(acumuladorImportes, 0.21)
+            total = sumar(acumuladorImportes, IVA)
+            alert(`Detalle de compra: \nSubtotal productos: $${acumuladorImportes} \nIVA $${IVA} \nTotal $${total}`)
 
             if(carrito == 0) {
                 alert("Aun no ha ingresado productos al carrito")

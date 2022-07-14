@@ -8,8 +8,13 @@ function sumarCarrito(carrito) {
     carritoImportes.forEach(producto => {
         acumuladorImportes += producto
     })
-
+    
     acumuladorImportes = carritoImportes.reduce((prev, act) => prev + act, 0)
+}
+
+function vaciarCarrito() {
+    carrito.splice(0, carrito.length)
+    acumuladorImportes = 0
 }
 
 let opcion1, opcion2, opcion3, productoNombre, productoPrecio, carritoImportes, acumuladorImportes = 0, IVA = 0, total = 0, totalen3 = 0, totalEn6 = 0, totalEn12 = 0
@@ -97,7 +102,7 @@ do {
             total = sumar(acumuladorImportes, IVA)
             alert(`Detalle de compra: \nSubtotal productos: $${acumuladorImportes} \nIVA $${IVA} \nTotal $${total}`)
 
-            if(carrito == 0) {
+            if(carrito.length == 0) {
                 alert("Aun no ha ingresado productos al carrito")
                 break
             }
@@ -124,7 +129,7 @@ do {
                 
                     switch(opcion3){
                         case 1:
-                            carrito = 0
+                            vaciarCarrito()
                             alert(`¡Gracias por su compra! \nLo esperamos con su pedido por caja`)
                             break
                         default:
@@ -142,7 +147,7 @@ do {
                 
                     switch(opcion3){
                         case 1:
-                            carrito = 0
+                            vaciarCarrito()
                             alert(`¡Gracias por su compra! \nLo esperamos con su pedido por caja`)
                             break
                         default:
@@ -164,7 +169,7 @@ do {
                 
                     switch(opcion3){
                         case 1:
-                            carrito = 0
+                            vaciarCarrito()
                             alert(`¡Gracias por su compra! \nLo esperamos con su pedido por caja`)
                             break
                         default:

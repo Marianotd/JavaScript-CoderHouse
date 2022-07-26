@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://bootswatch.com/5/sketchy/bootstrap.min.css">
+    <title>Clase 11</title>
+</head>
+<body>
+    <div class="container">
+        <form id="formTareas">
+            <div class="mb-3">
+                <label for="nombreTarea" class="form-label">Nombre Tarea</label>
+                <input type="text" class="form-control" id="nombreTarea" name="nombre">
+            </div>
+    
+            <div class="mb-3">
+                <label for="descripcionTarea" class="form-label">Descripción Tarea</label>
+                <input type="text" class="form-control" id="descripcionTarea" name="descripcion">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Crear tarea</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <button id="botonTareas" class="btn btn-dark my-5">Mostrar Tareas</button>
+        <div id="divTareas" class="row"></div>    
+    </div>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
